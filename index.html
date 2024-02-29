@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+        background: #efefef;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .message {
+        padding: 1rem;
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+      }
+      p {
+        margin: 0;
+      }
+
+      button {
+        width: 48px;
+        cursor: pointer;
+        height: 48px;
+        background: rgb(248, 202, 202);
+        border-radius: 14px;
+        box-shadow: 0px 3px 2px rgb(234, 49, 49, 0.25);
+        border: none;
+      }
+      button svg {
+        width: 28px;
+        height: 28px;
+      }
+      .message-outer {
+        position: relative;
+      }
+      .canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .center{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:1rem;
+        padding:3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div class="message-outer">
+        <div class="message">
+          <p>Hello, this is a test message?</p>
+        </div>
+      </div>
+      <button>
+        <svg
+          id="Delete trash"
+          width="24"
+          height="24"
+          viewBox="0 0 25 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19.8534 9.55469H5.14746"
+            stroke="rgb(211, 51, 51)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M19.0691 9.55469L18.2721 19.2855C18.1574 20.6865 16.9869 21.7651 15.5812 21.7651H9.41761C8.01189 21.7651 6.84135 20.6865 6.72661 19.2855L5.92969 9.55469"
+            stroke="rgb(211, 51, 51)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18.0016 9.18616C18.0016 7.59193 16.9272 6.12333 15.115 6.29956C14.2858 6.3802 13.6111 6.99144 13.123 7.63081"
+            stroke="rgb(211, 51, 51)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M7.27471 9.55481C7.09564 9.1104 6.99707 8.62491 6.99707 8.11639C6.99707 5.98967 8.72112 4.26594 10.8478 4.26562C13.1783 4.26528 14.2748 6.3583 14.2748 6.3583"
+            stroke="rgb(211, 51, 51)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            opacity="0.4"
+            d="M12.2702 21.7812L6.44238 15.6757"
+            stroke="rgb(211, 51, 51)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            opacity="0.4"
+            d="M6.66406 9.57086L17.4043 21.0547"
+            stroke="rgb(211, 51, 51)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            opacity="0.4"
+            d="M18.0654 9.57162L7.45377 20.918"
+            stroke="rgb(211, 51, 51)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            opacity="0.4"
+            d="M6.44251 15.6836L12.5283 9.55626"
+            stroke="rgb(211, 51, 51)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            opacity="0.4"
+            d="M12.7848 21.7812L18.5684 15.6757"
+            stroke="rgb(211, 51, 51)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            opacity="0.4"
+            d="M18.5679 15.6836L12.5283 9.55626"
+            stroke="rgb(211, 51, 51)"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <script type="text/javascript" src="dom.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
