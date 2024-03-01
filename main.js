@@ -1,9 +1,4 @@
 const btn = document.querySelector("button");
-let width;
-let height;
-let imgDataArr;
-let canvases = [];
-let mainCanvas;
 class Thanos {
   constructor(element) {
     this.element = element;
@@ -131,100 +126,8 @@ class Thanos {
 window.onload = () => {
   const messageNode = document.querySelector(".center");
   const thanos = new Thanos(messageNode);
-  // const messageOuterNode = document.querySelector(".message-outer");
-  // domtoimage
-  //   .toPng(messageNode, {
-  //     quality: 1,
-  //   })
-  //   .then((imgData) => {
-  //     const img = new Image();
-  //     img.src = imgData;
-
-  //     width = messageNode.getBoundingClientRect().width;
-  //     height = messageNode.getBoundingClientRect().height;
-  //     const canvas = createAndPaintCanvas(
-  //       img,
-  //       messageNode.getBoundingClientRect().width,
-  //       messageNode.getBoundingClientRect().height,
-  //       messageOuterNode
-  //     );
-  //     mainCanvas = canvas;
-  //   });
   btn.addEventListener("click", function (e) {
     e.preventDefault();
     thanos.explode();
-    //   messageNode.style.opacity = 0;
-    //   const imageData = mainCanvas
-    //     .getContext("2d")
-    //     .getImageData(0, 0, mainCanvas.width, mainCanvas.height);
-    //   imgDataArr = imageData;
-    //   handleImageData();
   });
 };
-document.addEventListener("DOMContentLoaded", () => {});
-// function createAndPaintCanvas(imageData, width, height, append) {
-//   const canvas = document.createElement("canvas");
-//   const ctx = canvas.getContext("2d");
-//   canvas.width = width;
-//   canvas.height = height;
-//   canvas.classList.add("canvas");
-//   ctx.drawImage(imageData, 0, 0);
-//   // if (append) append.appendChild(canvas);
-//   return canvas;
-// }
-// function handleImageData() {
-//   const data = new Uint8ClampedArray(imgDataArr.data);
-//   for (let j = 0; j < data.length; j++) {
-//     data[j] = 0;
-//   }
-//   for (let i = 0; i < 10; i++) {
-//     const newCanvas = document.createElement("canvas");
-//     const ctx = newCanvas.getContext("2d");
-//     ctx.putImageData(new ImageData(data, width, height), 0, 0);
-//     canvases.push(newCanvas);
-//   }
-//   handleCanvases();
-
-//   // i.data = [...data];
-
-//   // for(let i=0;i<data.length/4;i+=4){
-//   //     const a = imgData[i];
-//   // }
-// }
-// function randomIntFromInterval(min, max) {
-//   // min and max included
-//   return Math.floor(Math.random() * (max - min + 1) + min);
-// }
-
-// function handleCanvases() {
-//   for (let i = 0; i < imgDataArr.data.length; i += 4) {
-//     const randNum = randomIntFromInterval(0, canvases.length - 1);
-//     const canvas = canvases[randNum];
-//     const ctx = canvas.getContext("2d");
-//     const data = ctx.getImageData(0, 0, width, height);
-
-//     data.data[i] = imgDataArr.data[i];
-//     data.data[i + 1] = imgDataArr.data[i + 1];
-//     data.data[i + 2] = imgDataArr.data[i + 2];
-//     data.data[i + 3] = imgDataArr.data[i + 3];
-//     const arr = new Uint8ClampedArray(data.data);
-//     const newImg = new ImageData(arr, width, height);
-//     canvas.width = width;
-//     canvas.height = height;
-//     canvas.classList.add("canvas");
-//     messageOuterNode.appendChild(canvas);
-//     ctx.putImageData(newImg, 0, 0);
-//   }
-//   document.querySelectorAll("canvas").forEach((c, i) => {
-//     c.animate(
-//       {
-//         transform: "translateY(-200px) translateX(-100px)",
-//         opacity: 0,
-//       },
-//       {
-//         duration: 1000 * i,
-//         fill: "forwards",
-//       }
-//     );
-//   });
-// }
